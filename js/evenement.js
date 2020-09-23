@@ -1,4 +1,4 @@
-var test = $("ul")[0].firstChild;
+//var test = $("ul")[0].firstChild;
 var li = $("li")[2];
 var nouvelle = "<li>node4</li>";
 
@@ -9,9 +9,7 @@ $(li).append(nouvelle);
 var div1 = $("#div1");
 
 // on associe l'évènement 'click' à la div1 que nous venons de selectionner, et pour chaque clic, la fonction anonyme déclarée s'execute automatiquement
-div1.click(function () {
-  //alert('Div1 (test1) - évènement CLICK');
-});
+
 //----------------------------------------------------------------------
 // On selectionne la div1 et dans le même temps on associe l'évènement 'click' et la fonction anonyme s'execute automatiquement
 div1.click(function () {
@@ -22,18 +20,14 @@ div1.click(function () {
 //----------------------------------------------------------------------
 // addEventListener() fonction prédéfinie qui fait partie de l'objet selectionné (div1) et qui permet d'associer un évènement
 // addEventListener() : 1er argument : l'évènement | 2ème arguement : le code à executer à l'évènement
-div1.click(function () {
-  //alert('Div1 (test3) - évènement CLICK');
-});
+
 
 //----------------------------------------------------------------------
-div1.click(function () {
-  alert("Div1 (test4) - évènement CLICK");
-});
+
 
 //---------- EVENEMENT DBLCLICK
 // Exo : selectionner la div id 'div2', associer l'évènement double click et afficher une alerte en cas de double clic sur la div
-$("#div2").click(function () {
+$("#div2").dblclick(function () {
   $(this).css("boxShadow", "13px 17px 23px -1px rgba(0,0,0,0.75)");
   $(this).css("letterSpacing", "15px");
   $(this).css("borderRadius", "15px");
