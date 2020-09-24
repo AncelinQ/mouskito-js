@@ -30,12 +30,14 @@
     let car = document.getElementById('car');
 
     function getSearch(data) {
-      let getSearchFromUri = window.location.search.substr(window.location.search.lastIndexOf("=") + 1);
+      let searchDataStartIndex = window.location.search.lastIndexOf("=") + 1;
+      let getSearchFromUri = window.location.search.substr(searchDataStartIndex);
       data.innerHTML = getSearchFromUri;
     }
 
     function getHash(data) {
-      let getHashFromUri = window.location.hash.substr(window.location.hash.lastIndexOf("/") + 1);
+      let hashDataStartIndex = window.location.hash.lastIndexOf("/") + 1;
+      let getHashFromUri = window.location.hash.substr(hashDataStartIndex);
       data.innerHTML = getHashFromUri;
     }
 
