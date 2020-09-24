@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Age</th>
+        <th>Voiture</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="age"></td>
+        <td id="car"></td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    //'http://localhost:90/2iTech/Javascript/gitMoussa/mouskito-js/location.html?name=khalid#toto/machine';
+    window.location.href = 'http://localhost:90/2iTech/Javascript/gitMoussa/mouskito-js/location.html?age=25#voiture/peugeot';
+
+    function getUrlInfo() {
+      var getAge = window.location.search.substr(window.location.search.lastIndexOf("=") + 1);
+      var getCar = window.location.hash.substr(window.location.hash.lastIndexOf("/") + 1);
+
+      var age = document.getElementById('age');
+      var car = document.getElementById('car');
+
+      age.innerHTML = getAge;
+      car.innerHTML = getCar;
+
+    }
+
+    getUrlInfo();
+
+  </script>
+</body>
+
+</html>

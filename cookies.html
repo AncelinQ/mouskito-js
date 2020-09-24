@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies</title>
+</head>
+
+<body>
+  <script>
+    document.cookie = 'name=sookia;expires=Fri, 30 Dec 9999 23:59:59 GMT;';
+    document.cookie = 'firstName=khalid;expires=Fri, 30 Dec 9999 23:59:59 GMT;';
+
+    function getCookie(cName) {
+      let name = cName + "=";
+
+      var cookiesArray = document.cookie.split(';');
+
+      for (var i = 0; i < cookiesArray.length; i++) {
+
+        var oneCookie = cookiesArray[i];
+        while (oneCookie.charAt(0) == ' ') {
+          oneCookie = oneCookie.substring(1);
+        }
+        if (oneCookie.indexOf(name) == 0) {
+          return oneCookie.substring(name.length, oneCookie.length);
+        }
+      }
+      return "";
+    }
+
+
+    let cookieName = getCookie('name');
+    console.log(cookieName);
+
+
+
+    //document.cookie = 'firstName=khalid;max-age=0;';
+  </script>
+</body>
+
+</html>
