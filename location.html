@@ -29,16 +29,19 @@
     var age = document.getElementById('age');
     var car = document.getElementById('car');
 
-    function getUrlInfo(getSearch, getHash) {
+    function getSearch(getSearch) {
       var getSearchFromUri = window.location.search.substr(window.location.search.lastIndexOf("=") + 1);
-      var getHashFromUri = window.location.hash.substr(window.location.hash.lastIndexOf("/") + 1);
-
       getSearch.innerHTML = getSearchFromUri;
-      getHash.innerHTML = getHashFromUri;
-
     }
 
-    getUrlInfo(age, car);
+    function getHash(getHash) {
+      var getHashFromUri = window.location.hash.substr(window.location.hash.lastIndexOf("/") + 1);
+      getHash.innerHTML = getHashFromUri;
+    }
+
+    getSearch(age);
+    getHash(car);
+
 
   </script>
 </body>
