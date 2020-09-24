@@ -26,17 +26,17 @@
     //'http://localhost:90/2iTech/Javascript/gitMoussa/mouskito-js/location.html?name=khalid#toto/machine';
     window.location.href = 'http://localhost:90/2iTech/Javascript/gitMoussa/mouskito-js/location.html?age=25#voiture/peugeot';
 
-    var age = document.getElementById('age');
-    var car = document.getElementById('car');
+    let age = document.getElementById('age');
+    let car = document.getElementById('car');
 
-    function getSearch(getSearch) {
-      var getSearchFromUri = window.location.search.substr(window.location.search.lastIndexOf("=") + 1);
-      getSearch.innerHTML = getSearchFromUri;
+    function getSearch(data) {
+      let getSearchFromUri = window.location.search.substr(window.location.search.lastIndexOf("=") + 1);
+      data.innerHTML = getSearchFromUri;
     }
 
-    function getHash(getHash) {
-      var getHashFromUri = window.location.hash.substr(window.location.hash.lastIndexOf("/") + 1);
-      getHash.innerHTML = getHashFromUri;
+    function getHash(data) {
+      let getHashFromUri = window.location.hash.substr(window.location.hash.lastIndexOf("/") + 1);
+      data.innerHTML = getHashFromUri;
     }
 
     getSearch(age);
